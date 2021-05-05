@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Associate Details</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h3> Skill Tracker</h3>
+    <hr>
+
+    <p class="h4 mb-4">Associate Details</p>
+
+    <form action="#" th:action="@{/associates/view}"
+          th:object="${associates}" method="POST">
+
+        <!-- Add hidden form field to handle update -->
+        <h5>Associate ID</h5>
+        <input type="text" th:field="*{associateId}"
+               class="form-control mb-4 col-4" placeholder="Associate ID"/>
+
+        <h5>Associate Name</h5>
+        <input type="text" th:field="*{name}"
+               class="form-control mb-4 col-4" placeholder="Associate Name">
+
+        <h5>Associate Email</h5>
+        <input type="text" th:field="*{email}"
+               class="form-control mb-4 col-4" placeholder="Associate Email">
+
+        <h5>Associate Mobile Number</h5>
+        <input type="text" th:field="*{mobileNumber}"
+               class="form-control mb-4 col-4" placeholder="Mobile Number">
+
+        <h5>Associate Skills</h5>
+        <input type="text" th:field="*{skills}"
+               class="form-control mb-4 col-4" placeholder="Associates Skill">
+
+
+    </form>
+
+    <hr>
+    <a th:href="@{/associates/list}">Back to Associates List</a>
+
+</div>
+</body>
+
+</html>
+
+
+
